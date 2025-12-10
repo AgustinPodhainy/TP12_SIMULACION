@@ -1,0 +1,1 @@
+Mejor distribución encontrada: {'gamma': {'a': 28.278269540538748, 'loc': -0.06407790415847495, 'scale': 0.008110375705965431}}
