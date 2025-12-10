@@ -1,0 +1,1 @@
+Mejor distribución encontrada: {'norm': {'loc': 22643.286902212592, 'scale': 811.6085840692269}}
