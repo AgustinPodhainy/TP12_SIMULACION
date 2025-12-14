@@ -1,17 +1,25 @@
-# Gestión Óptima de Políticas de Descuento y Repartidores para Maximizar la Rentabilidad del Negocio y la Satisfacción del Usuario
+# Estudio de Estrategias del Uso de Pesticidas y su Impacto en el Rendimiento Agrícola y la Sustentabilidad Apícola mediante Simulación Dinámica
 
-Este repositorio contiene el desarrollo del Trabajo Práctico Nº6 de la materia **Simulación** (UTN FRBA), enfocado en la gestión óptima de políticas de descuento y repartidores para maximizar la rentabilidad y la satisfacción del usuario en la empresa Glovo, utilizando un dataset real de India.
+Este repositorio contiene el desarrollo del Trabajo Práctico Nº12 de la materia **Simulación** (UTN FRBA), enfocado en el análisis del trade-off entre producción agrícola, uso de pesticidas y preservación de las abejas, mediante un modelo de simulación dinámica basado en datos reales y distribuciones de probabilidad ajustadas.
+
+El trabajo estudia cómo distintas políticas de manejo agrícola impactan simultáneamente en la producción, la supervivencia de las abejas y la acumulación de residuos químicos en el suelo, con el objetivo de identificar estrategias productivas sostenibles en el largo plazo.
 
 ## Descripción General
 
-El objetivo principal es modelar, simular y analizar el impacto de diferentes políticas de asignación de repartidores y descuentos sobre el negocio y los usuarios. El trabajo parte de un escenario donde la gerencia busca minimizar costos con pocos repartidores, lo que genera demoras y arrepentimiento de usuarios. Se estudian alternativas que incluyen aumentar la cantidad de trabajadores y aplicar descuentos, evaluando los efectos en:
+El objetivo principal del trabajo es modelar, simular y analizar el impacto de diferentes combinaciones de:
 
-- **Ganancia Neta**
-- **Satisfacción del Usuario**
-- **Arrepentimiento de Usuario**
-- **Rentabilidad vs. Experiencia**
+- Cantidad de hectáreas cultivadas (HC)
+- Toneladas de pesticidas aplicadas por hectárea (TPH)
+sobre el desempeño global del sistema agrícola.
 
-La simulación se realiza evento a evento, considerando el tiempo comprometido de los repartidores y una rutina de arrepentimiento de usuarios ante grandes demoras.
+El modelo considera explícitamente el rol de las abejas como servicio ecosistémico de polinización, así como los efectos negativos del uso intensivo de pesticidas, que incrementan la mortalidad de colonias y la saturación química del suelo.
+
+A partir de un horizonte de simulación de largo plazo (20 años), se evalúan distintas estrategias productivas, analizando sus consecuencias en:
+
+- Producción Agrícola Promedio anual (PAP)
+- Porcentaje Final de la población original de abejas que logra sobrevivir (PAV)
+- Porcentaje de Producción atribuible a las Abejas (PPA)
+- Nivel Promedio de Saturación Química del suelo (NPSQ)
 
 ## Estructura del Repositorio
 
@@ -22,21 +30,18 @@ La simulación se realiza evento a evento, considerando el tiempo comprometido d
   Archivo con la exposición utilizada para la defensa del trabajo.
 
 - **Diagrama**  
-  Imagen/esquema del diagrama de la simulación evento a evento y flujo de arrepentimiento.
+  Esquema del modelo de simulación dinámica, incluyendo stocks, flujos y relaciones causales entre pesticidas, abejas, suelo y producción.
 
-- **TP 6 - Análisis Previo (1).txt**  
+- **TP12 – Análisis Previo.txt**  
   Documento con la definición de variables, eventos y estructura de la simulación.
 
-- **formato_papers_estudiantes (3).txt**  
-  Formato requerido para la presentación del paper académico.
-
-- **PAPER_EXAMPLE.txt**  
-  Ejemplo de paper de simulación para referencia en la redacción.
 
 ## Metodología
 
-- **Simulación Evento a Evento:**  
-  El tiempo avanza hasta el próximo evento relevante (llegada de pedido, entrega, arrepentimiento).
+- **Simulación Avance del Tiempo por Intervalos Fijos:**  
+    El sistema se modela mediante simulación dinámica de sistemas, donde el tiempo avanza en pasos discretos de duración constante. En particular, se utiliza un paso de integración Δt = 1 año, adecuado para representar procesos agrícolas y ecológicos de evolución lenta, como la acumulación de residuos     químicos en el suelo y la dinámica poblacional de las abejas.
+
+El horizonte temporal de la simulación es de 20 años, lo que permite analizar tanto los efectos de corto plazo como las consecuencias de largo plazo de las distintas estrategias de manejo agrícola.
 - **Modelado de Variables:**  
   - Exógenas: Datos de entrada (intervalo entre pedidos, tiempo de entrega, precio, distancia).
   - De Control: Cantidad de repartidores, intervalo de descuento.
@@ -46,41 +51,29 @@ La simulación se realiza evento a evento, considerando el tiempo comprometido d
 
 ## Escenarios Analizados
 
-1. **Escenario Actual:**  
-   Gerencia minimiza costos con pocos repartidores. Alta tasa de arrepentimiento por demoras.
-2. **Maximización de Ganancia Neta:**  
-   Balance entre costos de repartidores/descuentos y utilidad.
-3. **Maximización de Satisfacción de Usuario:**  
-   Optimización con feedback por tiempo de espera y entrega.
-4. **Maximización Dual:**  
-   Estrategias que buscan simultáneamente la mejor experiencia y la mayor rentabilidad.
+**Escenario Intensivo (E1):**
+Alta superficie cultivada y uso intensivo de pesticidas. Maximiza la producción inicial, pero genera una fuerte degradación ecológica y una caída de la producción en el largo plazo.
+
+**Escenario de Transición (E2):**
+Uso moderado de pesticidas y superficie intermedia. Permite alcanzar una producción estable y competitiva, preservando parcialmente la población de abejas y manteniendo controlada la saturación química del suelo.
+
+**Escenario Ecológico (E3):**
+Gran superficie cultivada con uso mínimo de pesticidas. Preserva la población de abejas y reduce el impacto químico, pero no alcanza niveles de producción competitivos.
 
 ## Cómo usar este repositorio
 
 1. **Revisar los archivos de análisis previo** para entender la estructura y variables del modelo.
 2. **Consultar las FDPS** para ver cómo se modelan los tiempos y distancias reales.
 3. **Utilizar la presentación y el diagrama** para entender el flujo de la simulación.
-4. **Usar el formato y ejemplo de paper** para redactar el documento académico final.
 
 ## Autoría
 
 Trabajo realizado por:  
-- Thiago Martín Gonzalez  
-- María Emilia Andersen  
+- María Emilia Andersen
+- Priscila Sharon D’Antoni 
 - Agustín Podhainy Vignola  
 
-Materia: **Simulación - K4573**  
+Materia: **Simulación**  
 Universidad Tecnológica Nacional, Facultad Regional Buenos Aires
 
----
 
-> Para consultas sobre el modelo o el paper, revisar el archivo de análisis previo y la estructura del formato de presentación.
-
-Autoría
-Trabajo realizado por:
-
-Thiago Martín Gonzalez
-María Emilia Andersen
-Agustín Podhainy Vignola
-Materia: Simulación - K4573
-Universidad Tecnológica Nacional, Facultad Regional Buenos Aires
