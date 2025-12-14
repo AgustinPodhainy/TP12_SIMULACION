@@ -38,16 +38,16 @@ A partir de un horizonte de simulación de largo plazo (20 años), se evalúan d
 
 ## Metodología
 
-- **Simulación Avance del Tiempo por Intervalos Fijos:**  
-    El sistema se modela mediante simulación dinámica de sistemas, donde el tiempo avanza en pasos discretos de duración constante. En particular, se utiliza un paso de integración Δt = 1 año, adecuado para representar procesos agrícolas y ecológicos de evolución lenta, como la acumulación de residuos     químicos en el suelo y la dinámica poblacional de las abejas.
+ **Simulación Avance del Tiempo por Intervalos Fijos:**  
 
-El horizonte temporal de la simulación es de 20 años, lo que permite analizar tanto los efectos de corto plazo como las consecuencias de largo plazo de las distintas estrategias de manejo agrícola.
-- **Modelado de Variables:**  
-  - Exógenas: Datos de entrada (intervalo entre pedidos, tiempo de entrega, precio, distancia).
-  - De Control: Cantidad de repartidores, intervalo de descuento.
-  - Endógenas: Estado y resultados (tiempo comprometido, espera, ociosidad, satisfacción, ganancia, arrepentimiento).
-- **Ajuste con Distribuciones:**  
-  Las FDPS se ajustan a los datos reales para intervalos y distancias, permitiendo una simulación representativa.
+El modelo se implementa mediante **simulación dinámica de sistemas**.
+
+El tiempo de simulación avanza con un **delta t (Δt) fijo de 1 año**, adecuado para representar procesos agrícolas y ecológicos de evolución lenta, como la dinámica poblacional de las abejas y la acumulación y degradación de pesticidas en el suelo.
+
+Para cada escenario se realizan **dos simulaciones**, una de **corto plazo (5 años)** y otra de **largo plazo (20 años)**, permitiendo comparar los efectos inmediatos y acumulativos de las distintas estrategias de manejo.
+
+En cada paso anual se actualizan la cantidad de colonias vivas, el impacto residual de pesticidas en el suelo y el rendimiento agrícola anual, en función de las decisiones de control (HC y TPH).
+
 
 ## Escenarios Analizados
 
