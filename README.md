@@ -23,7 +23,7 @@ A partir de un horizonte de simulación de largo plazo (20 años), se evalúan d
 
 ## Estructura del Repositorio
 
-- **FDPS/**  
+- **FDPS**  
   Resultados del ajuste de funciones de densidad de probabilidad (fdp) para los modelos de simulación.
 
 - **Presentación**  
