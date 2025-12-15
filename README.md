@@ -58,7 +58,7 @@ Alta superficie cultivada y uso intensivo de pesticidas. Maximiza la producción
 Uso moderado de pesticidas y superficie intermedia. Permite alcanzar una producción estable y competitiva, preservando parcialmente la población de abejas y manteniendo controlada la saturación química del suelo.
 
 **Escenario Ecológico (E3):**
-Gran superficie cultivada con uso mínimo de pesticidas. Preserva la población de abejas y reduce el impacto químico, pero no alcanza niveles de producción competitivos.
+Superficie intermedia cultivada con uso mínimo de pesticidas. Preserva la población de abejas y reduce el impacto químico, pero no alcanza niveles de producción competitivos.
 
 ## Cómo usar este repositorio
 
