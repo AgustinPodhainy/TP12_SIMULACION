@@ -32,7 +32,7 @@ A partir de un horizonte de simulación de largo plazo (20 años), se evalúan d
 - **Diagrama**  
   Esquema del modelo de simulación dinámica, incluyendo stocks, flujos y relaciones causales entre pesticidas, abejas, suelo y producción.
 
-- **TP12 – Análisis Previo.txt**  
+- **Paper**  
   Documento con la definición de variables, eventos y estructura de la simulación.
 
 
